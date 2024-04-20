@@ -39,9 +39,9 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
   const orderUserId =
     typeof order.user === "string" ? order.user : order.user.id
 
-//   if (orderUserId !== user?.id) {
-//     return redirect(`/sign-in?origin=thank-you?orderId=${order.id}`)
-//   }
+  //   if (orderUserId !== user?.id) {
+  //     return redirect(`/sign-in?origin=thank-you?orderId=${order.id}`)
+  //   }
 
   const products = order.products as Product[]
 
@@ -72,14 +72,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
             {order._isPaid ? (
               <p className="mt-2 text-base text-muted-foreground">
                 Your order was processed and your assets are available to
-                download below. We&apos;ve sent your receipt and order details
-                to{" "}
-                {typeof order.user !== "string" ? (
-                  <span className="font-medium text-gray-900">
-                    {order.user.email}
-                  </span>
-                ) : null}
-                .
+                download below.
               </p>
             ) : (
               <p className="mt-2 text-base text-muted-foreground">
