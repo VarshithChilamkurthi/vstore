@@ -10,6 +10,10 @@ Steps of Approach:
 9. Payload CMS was used to handle the admin dashboard, where a seller could list the products.
 10. ```payload.config.ts``` file has the entire setup with payload CMS. The admin dashboard was hosted on local server at ```/sell``` route. The output will be extracted to a typescript file by generating ```payload-types.ts```.
 11. Connected with MongoDB to store user details and products.
+12. Used react-hook-form and Zod library for schema validation to validate user email and password. ```lib/validators/account-credentials-validator.js```
+13. Using resend api to send verification email to validate if its a genuine user or not.
+    ![image](https://github.com/VarshithChilamkurthi/vstore/assets/52421766/1ad4c971-81dd-43a6-a0ad-3b8eef0ed0ff)
+
 
 
 <img width="1192" alt="image" src="https://github.com/VarshithChilamkurthi/vstore/assets/52421766/07963f2d-f6ba-40b2-829f-8812d887964d">
