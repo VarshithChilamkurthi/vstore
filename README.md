@@ -1,4 +1,4 @@
-Steps of Approach:
+Approach:
 1. Followed component based approach. Created multiple sub components based on the requirement instead of writing the code in a single file. This helps is code reusability and code readability.
 2. MaxWidthWrapper component helps in binding the children with default constraints. On top of that, if we want to change anything, we can do it whenever we're calling this function.
 3. The main Home function and perks section were bound between the MaxWidthWrapper. A lot of other functions were bound with this MaxWidthWrapper component.
