@@ -9,10 +9,18 @@ Steps of Approach:
 8. Created a utility function ```formatPrice()``` in ```utils.ts``` for price formatting.
 9. Payload CMS was used to handle the admin dashboard, where a seller could list the products.
 10. ```payload.config.ts``` file has the entire setup with payload CMS. The admin dashboard was hosted on local server at ```/sell``` route. The output will be extracted to a typescript file by generating ```payload-types.ts```.
-11. Connected with MongoDB to store user details and products.
-12. Used react-hook-form and Zod library for schema validation to validate user email and password. ```lib/validators/account-credentials-validator.js```
-13. Using resend api to send verification email to validate if its a genuine user or not.
+11. ```ProductFile.ts``` contains the CMS main page model where we define the list of items that are displayed on sellers dashboard like products, orders, product_files. The whole CMS collections models are defined in the folder ```collections```.
+    <img width="1306" alt="image" src="https://github.com/VarshithChilamkurthi/vstore/assets/52421766/c61ef778-ed60-4171-bb85-c396cbdeec47">
+12. Connected with MongoDB to store user details and products.
+13. Used react-hook-form and Zod library for schema validation to validate user email and password. ```lib/validators/account-credentials-validator.js```
+14. Using resend api to send verification email to validate if its a genuine user or not. A ```_verified``` property is added in the database to check if the user was verified or not.
     ![image](https://github.com/VarshithChilamkurthi/vstore/assets/52421766/1ad4c971-81dd-43a6-a0ad-3b8eef0ed0ff)
+15. On successful verification, the user will be asked to sign in to the user's account. This is handled in ```VerifyEmail.tsx```.
+16. The fields of new product is defined in ```Products.ts``` file. So when any seller or admin creates a new product, these fields are visible in the CMS.
+17. A new seller can list the products, but it requires an approval from admin to be published in the website.
+18. Implemented Stript for accepting payments. For now only the developer mode is used, but once we use it for production, we can use an actual stripe account to accept payments.
+19. Added security in ```server.ts``` so that only the users who are signed in can access the checkout.
+20. Users are checked if they're signed in or not in ```middleware.ts``` file.
 
 
 
